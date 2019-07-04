@@ -31,7 +31,8 @@ function doThis() {
       username: "dsuser", dst : "http://www.starbucks.com.sg/"
     }, function(r){
       console.log("Refreshed!");
-      chrome.alarms.create({ delayInMinutes: 1.0 });
+      //chrome.alarms.create({ delayInMinutes: 1.0 });
+      setTimeout(function(){doThis();}, 250);
     });
   }
 }
@@ -51,11 +52,11 @@ chrome.webRequest.onHeadersReceived.addListener(
   },
   ['blocking', 'responseHeaders']
 );
-
+/*
 chrome.alarms.onAlarm.addListener(function () {
   doThis();
 });
-
+*/
 
 chrome.browserAction.onClicked.addListener(function (tab) {
   auto_sb.active = !auto_sb.active;
