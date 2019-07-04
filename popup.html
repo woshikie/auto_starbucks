@@ -1,0 +1,21 @@
+<html>
+
+<head>
+  <link href="bootstrap-toggle.css" rel="stylesheet">
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="bootstrap-toggle.js"></script>
+</head>
+
+<body>
+  <label class="checkbox-inline">
+    <input id="toggle-one" type="checkbox" checked data-toggle="toggle"> On/Off
+  </label>
+</body>
+
+<script>
+  $(function() {
+    $('#toggle-one').bootstrapToggle();
+  })
+</script>
+
+</html>
